@@ -1,0 +1,54 @@
+/* Glass effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      backdrop-filter: blur(18px);
+    }
+
+    /* Fade animation */
+    .fade {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hero sliding text */
+    .slide-text-wrapper {
+      height: 32px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-text {
+      position: absolute;
+      width: 100%;
+      animation: slideAnim 6s infinite;
+    }
+
+    @keyframes slideAnim {
+      0% {
+        transform: translateY(0);
+      }
+
+      33% {
+        transform: translateY(-32px);
+      }
+
+      66% {
+        transform: translateY(-64px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
